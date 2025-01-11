@@ -1,0 +1,719 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Body and Layout */
+body {
+    background-color: #f4f7fc;
+    color: #2e2e2e;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff; /* Белый фон */
+    color: #333; /* Цвет текста по умолчанию */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Логотип */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Навигационные ссылки */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+/* Ссылки внутри навигации */
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Подчеркивание ссылки при наведении */
+.nav-links a:hover {
+    color: #4c9dff;
+    border-bottom: 2px solid #4c9dff;
+}
+
+/* Кнопка переключения тем */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .navbar {
+    background-color: #1c1c1c; /* Темный фон */
+    color: #f1f1f1; /* Белый текст */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .nav-links a {
+    color: #f1f1f1; /* Белый текст */
+}
+
+body.dark-mode .theme-toggle {
+    color: #f1f1f1; /* Белый иконка */
+}
+
+body.dark-mode .theme-toggle:hover {
+    color: #4c9dff; /* Акцентный цвет при наведении */
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #4c9dff, #a0c4ff);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .header-content {
+    max-width: 700px;
+}
+
+.header .photo-circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.header .subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+/* Dark Mode Header */
+body.dark-mode .header {
+    background:black;
+}
+
+body.dark-mode .header h1,
+body.dark-mode .header .subtitle {
+    color: #f1f1f1;
+}
+
+/* Contact Info */
+.header .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.header .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.header .contact-item a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header .contact-item a:hover {
+    color: #4c9dff;
+}
+
+/* Dark Mode Contact Info */
+body.dark-mode .header .contact-item a {
+    color: #f1f1f1;
+}
+
+/* Social Links */
+.header .social-links a {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.header .social-links a:hover {
+    color: #4c9dff;
+}
+
+/* Dark Mode Social Links */
+body.dark-mode .header .social-links a {
+    color: #f1f1f1;
+}
+
+/* Section */
+.section {
+    padding: 4rem 0;
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background-color: #1c1c1c; /* Темный фон */
+    color: #f1f1f1; /* Текст белого цвета */
+}
+
+/* About Container */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #2e2e2e; /* Темный серый фон */
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Контейнер взаимодействует с темной темой */
+.about-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* About Title */
+.about-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f1f1f1; /* Белый текст для контраста */
+    margin-bottom: 12px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Акцентная линия под заголовком */
+.about-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #4c9dff;
+    margin: 10px auto 20px auto;
+    border-radius: 2px;
+}
+
+/* About Description */
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc; /* Светлый серый текст */
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode About Section */
+body.dark-mode #about {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Title and Description contrast in dark mode */
+body.dark-mode .about-title {
+    color: #f1f1f1;
+}
+
+body.dark-mode .about-description {
+    color: #ccc;
+}
+
+/* Акцентная линия в темной теме */
+body.dark-mode .about-title::after {
+    background-color: #4c9dff;
+}
+
+/* Light Mode About Section */
+body.light-mode #about {
+    background-color: #f9f9f9; /* Светлый фон */
+    color: #333;
+}
+
+/* Light Mode About Container */
+body.light-mode .about-container {
+    background: #ffffff; /* Белый фон */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Светлая тень */
+}
+
+/* Light Mode About Title */
+body.light-mode .about-title {
+    color: #333; /* Темный текст */
+}
+
+body.light-mode .about-title::after {
+    background-color: #4c9dff; /* Синий акцент */
+}
+
+/* Light Mode About Description */
+body.light-mode .about-description {
+    color: #666; /* Темно-серый текст */
+}
+
+
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+    font-family: 'Roboto', sans-serif;  /* Применим тот же шрифт, как у заголовков проектов */
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;  /* Центрация заголовка */
+}
+
+/* Добавляем стили для позиционирования заголовка */
+.skills-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #4c9dff, #2a72d4);
+    margin: 10px auto 0;  /* Центрация линии */
+    border-radius: 2px;
+}
+
+/* Skill Card */
+.skill-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Roboto', sans-serif;  /* Применим тот же шрифт, как у заголовков проектов */
+}
+
+/* Skill Card: Hover Effect */
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Icons in Skill Card */
+.skill-card i {
+    font-size: 2.5rem;
+    color: #4c9dff;
+    margin-bottom: 1rem;
+}
+
+/* Skills Description */
+.skills-description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Dark Mode Skills Section */
+body.dark-mode .skill-card {
+    background-color: #2e2e2e;
+}
+
+body.dark-mode .skill-card h3,
+body.dark-mode .skill-card i {
+    color: #f1f1f1;
+}
+
+
+/* Projects Section */
+.projects-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #4c9dff, #2a72d4);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Project Card */
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Title */
+.project-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Project Description */
+.project-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* View Project Button */
+.view-project-btn {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #4c9dff, #2a72d4);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.view-project-btn:hover {
+    background: linear-gradient(90deg, #2a72d4, #4c9dff);
+    box-shadow: 0 4px 12px rgba(76, 157, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Adjusting Layout for Large Screens */
+@media screen and (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Dark Mode */
+body.dark-mode .projects-section {
+    background-color: #121212;
+}
+
+body.dark-mode .section-title {
+    color: #f1f1f1;
+}
+
+body.dark-mode .project-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .project-card h3,
+body.dark-mode .project-card p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .view-project-btn {
+    background: linear-gradient(90deg, #4c9dff, #2a72d4);
+}
+
+body.dark-mode .view-project-btn:hover {
+    box-shadow: 0 4px 12px rgba(76, 157, 255, 0.6);
+}
+
+
+/* Resume Section */
+.resume-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Section Title */
+.resume-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+    text-align: center;
+}
+
+.resume-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #4c9dff, #2a72d4);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Resume Content */
+.resume-content {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Resume Thumbnail */
+.resume-thumbnail {
+    max-width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+/* Resume Thumbnail: Slight zoom on hover */
+.resume-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Resume Content Description */
+.resume-content p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Download Resume Button */
+.download-resume-btn {
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #4c9dff, #2a72d4);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-resume-btn:hover {
+    background: linear-gradient(90deg, #2a72d4, #4c9dff);
+    box-shadow: 0 4px 12px rgba(76, 157, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Modal */
+.resume-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #333;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Dark Mode Resume Section */
+body.dark-mode .resume-section {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Dark Mode Resume Title */
+body.dark-mode .resume-title {
+    color: #f1f1f1;
+}
+
+/* Dark Mode Resume Content */
+body.dark-mode .resume-content {
+    background: #1e1e1e;
+    border: 1px solid #444;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .resume-content p {
+    color: #ccc;
+}
+
+/* Dark Mode Download Resume Button */
+body.dark-mode .download-resume-btn {
+    background: linear-gradient(90deg, #4c9dff, #2a72d4);
+    color: #fff;
+}
+
+body.dark-mode .download-resume-btn:hover {
+    background: linear-gradient(90deg, #2a72d4, #4c9dff);
+    box-shadow: 0 4px 12px rgba(76, 157, 255, 0.4);
+}
+
+/* Dark Mode Modal Content */
+body.dark-mode .modal-content {
+    background: #1e1e1e;
+}
+
+/* Dark Mode Close Button */
+body.dark-mode .close-modal {
+    color: #f1f1f1;
+}
+
+ /* button dark mod -------------------------*/
+
+/* Кнопка переключения темы */
+.theme-toggle {
+    position: fixed; /* Закрепим кнопку в углу экрана */
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4c9dff, #6a70ff); /* Градиентный фон */
+    border: none;
+    border-radius: 50%; /* Круглая форма */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Hover эффект для кнопки */
+.theme-toggle:hover {
+    transform: scale(1.1); /* Увеличиваем при наведении */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Иконка внутри кнопки */
+.theme-toggle i {
+    font-size: 1.8rem;
+    color: #fff; /* Белый цвет для контраста */
+    transition: transform 0.5s ease, color 0.3s ease;
+}
+
+/* Анимация при переключении темы */
+body.dark-mode .theme-toggle i {
+    transform: rotate(180deg); /* Поворот иконки */
+    color: #ffd700; /* Золотой цвет для иконки в dark mode */
+}
+
+body.light-mode .theme-toggle i {
+    transform: rotate(0deg); /* Возврат в исходное положение */
+    color: #000; /* Темная иконка в светлом режиме */
+}
